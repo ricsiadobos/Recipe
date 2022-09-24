@@ -1,0 +1,2 @@
+# Recipe
+Angular student project
