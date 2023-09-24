@@ -7,9 +7,9 @@ import { Directive, ElementRef, Input, HostListener, HostBinding } from "@angula
 export class DropdownDirective{
 
 
-    //false =  nem kapja meg az elem a CSS class kiegészítést
+        //false =  nem kapja meg az elem a CSS class kiegészítést
         //true  =  megkapja a CSS class az "open"
-   @HostBinding('class.open') isOpen: boolean = false;
+    @HostBinding('class.open') isOpen: boolean = false;
 
     @HostListener('click') toggleOpen(){
         this.isOpen = !this.isOpen;
