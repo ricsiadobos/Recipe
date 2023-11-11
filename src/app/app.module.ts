@@ -11,7 +11,9 @@ import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.com
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { FormsModule } from '@angular/forms';
 import { DropdownDirective } from './shared/dropdown.directive';
-import { AccountComponent } from './app/account/account.component';
+import { AccountService } from './app/accounts.service';
+import { LoggingService } from './logging.service';
+import { ShoppingListService } from './shopping-list/shoppingList.service';
 
 
 @NgModule({
@@ -26,8 +28,7 @@ import { AccountComponent } from './app/account/account.component';
     RecipeDetailComponent,
     RecipeItemComponent,
     ShoppingEditComponent,
-    DropdownDirective,
-    AccountComponent
+    DropdownDirective
 
   ],
   imports: [
@@ -35,7 +36,7 @@ import { AccountComponent } from './app/account/account.component';
     AppRoutingModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [ShoppingListService, AccountService, LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
